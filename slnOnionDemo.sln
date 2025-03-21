@@ -55,6 +55,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleArchi.Tests.Integrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleArchi.Tests.UnitTests", "src\Tests\UnitTests\SampleArchi.Tests.UnitTests.csproj", "{4A539C67-12A0-4EDA-AF6D-092DE72BC164}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{C4E0FD71-082F-43B6-9F2D-8E92AD5AFBB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleArchi.DependencyInjection", "src\DependencyInjection\SampleArchi.DependencyInjection.csproj", "{733E9239-7A2D-410C-9CAA-A9D3C1C5AC50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{4A539C67-12A0-4EDA-AF6D-092DE72BC164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A539C67-12A0-4EDA-AF6D-092DE72BC164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A539C67-12A0-4EDA-AF6D-092DE72BC164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{733E9239-7A2D-410C-9CAA-A9D3C1C5AC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733E9239-7A2D-410C-9CAA-A9D3C1C5AC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733E9239-7A2D-410C-9CAA-A9D3C1C5AC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733E9239-7A2D-410C-9CAA-A9D3C1C5AC50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +136,7 @@ Global
 		{824C99A9-FDC2-423B-938F-D27D40933D8D} = {D6CD1C90-248F-4EAB-8E62-6E74BEB75379}
 		{9BFB7560-0A4B-430D-866A-907E27ADEF79} = {3BEA42D4-1CC1-4298-9F73-E0B173B3898C}
 		{4A539C67-12A0-4EDA-AF6D-092DE72BC164} = {824C99A9-FDC2-423B-938F-D27D40933D8D}
+		{733E9239-7A2D-410C-9CAA-A9D3C1C5AC50} = {C4E0FD71-082F-43B6-9F2D-8E92AD5AFBB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39728EEF-C45B-4D64-8A13-B1D2D80C0D1F}
