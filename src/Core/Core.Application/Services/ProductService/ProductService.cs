@@ -1,4 +1,6 @@
 ﻿using SampleArchi.Core.Application.DTOS.Product;
+using SampleArchi.Core.Domain.Entities;
+using SampleArchi.Core.Domain.Interfaces;
 
 namespace SampleArchi.Core.Application.Services.ProductService
 {

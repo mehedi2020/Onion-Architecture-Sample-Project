@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Code\SampleArchi.Core.Domain.Entities.csproj" />
+    <ProjectReference Include="..\..\Core.Domain\Entities\Code\SampleArchi.Core.Domain.Entities.csproj" />
+    <ProjectReference Include="..\..\Core.Domain\Interfaces\SampleArchi.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\DTOs\SampleArchi.Core.Application.DTOS.csproj" />
   </ItemGroup>
 
 </Project>

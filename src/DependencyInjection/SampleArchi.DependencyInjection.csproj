@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Code\SampleArchi.Core.Domain.Entities.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.Application\Services\SampleArchi.Core.Application.Services.csproj" />
+    <ProjectReference Include="..\Core\Core.Domain\Interfaces\SampleArchi.Core.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Infrastructure\Repositories\SampleArchi.Infrastructure.Repository.csproj" />
   </ItemGroup>
 
 </Project>

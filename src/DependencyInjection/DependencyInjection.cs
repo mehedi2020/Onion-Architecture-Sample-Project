@@ -1,4 +1,8 @@
-﻿namespace SampleArchi.DependencyInjection
+﻿using Microsoft.Extensions.DependencyInjection;
+using SampleArchi.Core.Application.Services.ProductService;
+using SampleArchi.Core.Domain.Interfaces;
+
+namespace SampleArchi.DependencyInjection
 {
     public static class DependencyInjection
     {

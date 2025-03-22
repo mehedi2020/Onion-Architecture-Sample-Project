@@ -1,4 +1,6 @@
-﻿using SampleArchi.Core.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using SampleArchi.Core.Application.DTOS.Product;
+using SampleArchi.Core.Domain.Entities;
 using SampleArchi.Core.Domain.Interfaces;
 
 namespace SampleArchi.Core.Application.Services.ProductService
@@ -43,6 +45,16 @@ namespace SampleArchi.Core.Application.Services.ProductService
                 _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        Task<IEnumerable<ProductDto>> IProductRepository.GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ProductDto> IProductRepository.GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

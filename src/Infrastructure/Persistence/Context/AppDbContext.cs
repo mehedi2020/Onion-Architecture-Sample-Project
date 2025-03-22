@@ -1,4 +1,7 @@
-﻿namespace SampleArchi.Core.Application.Services.ProductService
+﻿using Microsoft.EntityFrameworkCore;
+using SampleArchi.Core.Domain.Entities;
+
+namespace SampleArchi.Core.Application.Services.ProductService
 {
     public class AppDbContext : DbContext
     {

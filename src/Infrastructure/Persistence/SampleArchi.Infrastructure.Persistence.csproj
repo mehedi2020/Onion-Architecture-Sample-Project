@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core.Domain\Entities\Code\SampleArchi.Core.Domain.Entities.csproj" />
+    <ProjectReference Include="..\..\Core\Core.Domain\Interfaces\SampleArchi.Core.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
