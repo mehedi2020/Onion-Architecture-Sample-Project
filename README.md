@@ -76,7 +76,7 @@ OnionArchitectureDemo
 
 1️⃣ **Clone the Repository**
 ```sh
-git clone https://github.com/your-username/OnionArchitectureDemo.git
+git clone https://github.com/mehedi2020/Onion-Architecture-Sample-Project.git
 cd OnionArchitectureDemo
 ```
 
@@ -163,6 +163,22 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 - Inspired by **Onion Architecture** principles
 - Special thanks to the **.NET community** for providing excellent resources
+
+## Textual Workflow Representation
+
++-------------------+       +-------------------+       +-------------------+
+|   Core Layer      |       | Application Layer |       | Infrastructure    |
+|   - Entities      | ----> | - DTOs            | ----> | - Persistence     |
+|   - Interfaces    |       | - Services        |       | - Repositories    |
++-------------------+       +-------------------+       +-------------------+
+        |                           |                           |
+        |                           |                           |
+        v                           v                           v
++-------------------+       +-------------------+       +-------------------+
+| Presentation      |       | Dependency        |       | Tests Layer       |
+| - WebAPI          |       | Injection         |       | - UnitTests       |
+| - WebUI           | <---- | - DI Registration | ----> | - IntegrationTests|
++-------------------+       +-------------------+       +-------------------+
 
 ---
 
