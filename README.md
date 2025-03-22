@@ -77,88 +77,9 @@ OnionArchitectureDemo
 
 1️⃣ **Clone the Repository**
 ```sh
-git clone https://github.com/mehedi2020/Onion-Architecture-Sample-Project.git
-cd OnionArchitectureDemo
-```
-
-2️⃣ **Restore Dependencies**
-```sh
-dotnet restore
-```
-
-3️⃣ **Configure Database**
-- Update the connection string in `appsettings.json` (WebAPI project).
-- Run migrations to create the database:
-```sh
-dotnet ef database update --project Infrastructure.Persistence
-```
-
-4️⃣ **Run the Application**
-
-- Start the WebAPI project:
-```sh
-dotnet run --project Presentation.WebAPI
-```
-- Start the WebUI project (if applicable):
-```sh
-dotnet run --project Presentation.WebUI
-```
-
----
-
-## ▶ Running the Application
-
-### 🌐 Web API
-- Open Swagger UI: [`https://localhost:5001/swagger`](https://localhost:5001/swagger)
-- Use **Postman** or **curl** to test API endpoints.
-
-### 🖥 Web UI
-- Open: [`https://localhost:5002`](https://localhost:5002)
-
----
-
-## 🧪 Testing
-
-### ✅ Unit Tests
-Run unit tests with:
-```sh
-dotnet test Tests.UnitTests
-```
-
-### 🔍 Integration Tests
-Run integration tests with:
-```sh
-dotnet test Tests.IntegrationTests
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Follow these steps:
-
-1. **Fork** the repository.
-2. **Create a new branch**:
-```sh
-git checkout -b feature/your-feature-name
-```
-3. **Commit your changes**:
-```sh
-git commit -m "Add new feature"
-```
-4. **Push to the branch**:
-```sh
-git push origin feature/your-feature-name
-```
-5. **Open a pull request**.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
+Clone the repository >> https://github.com/mehedi2020/Onion-Architecture-Sample-Project.git
+You can follow this one for that > https://learn.microsoft.com/en-us/azure/devops/repos/git/clone?view=azure-devops&tabs=visual-studio-2022
+``` 
 
 ## 🙏 Acknowledgments
 
