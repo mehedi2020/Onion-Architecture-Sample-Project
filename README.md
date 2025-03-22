@@ -78,6 +78,14 @@ The solution is organized into the following projects:
 
 ### **Steps**
 1. **Clone the Repository**:
-   ```bash
+   ```bash```
    git clone https://github.com/your-username/OnionArchitectureDemo.git
    cd OnionArchitectureDemo
+   
+2. **Restore Dependencies**:
+   ```bash```
+  dotnet restore
+  
+3. **Configure Database**:
+  - Update the connection string in appsettings.json (WebAPI project).
+  - Run migrations to create the database:
