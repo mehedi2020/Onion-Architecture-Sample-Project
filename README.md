@@ -1,91 +1,169 @@
-# Onion Architecture Demo
+# 📌 Onion Architecture Demo
 
-This repository demonstrates the implementation of **Onion Architecture** in a .NET application. The solution is structured into multiple projects, each representing a different layer of the architecture. Below is a detailed guide to understanding and working with this solution.
-
----
-
-## Table of Contents
-1. [Solution Overview](#solution-overview)
-2. [Project Structure](#project-structure)
-3. [Technologies Used](#technologies-used)
-4. [Setup and Installation](#setup-and-installation)
-5. [Running the Application](#running-the-application)
-6. [Testing](#testing)
-7. [Contributing](#contributing)
-8. [License](#license)
+This repository demonstrates the implementation of **Onion Architecture** in a .NET application. The solution is structured into multiple layers to ensure **separation of concerns, testability, and maintainability**.
 
 ---
 
-## Solution Overview
+## 📜 Table of Contents
 
-This solution follows the **Onion Architecture**, which emphasizes **separation of concerns**, **testability**, and **maintainability**. The architecture is divided into the following layers:
-
-1. **Core Layer**: Contains domain entities, interfaces, and business logic.
-2. **Application Layer**: Implements use cases, services, and DTOs.
-3. **Infrastructure Layer**: Handles data access, repositories, and external services.
-4. **Presentation Layer**: Provides the user interface (WebAPI and WebUI).
-5. **Dependency Injection Layer**: Centralizes dependency registration.
-6. **Tests Layer**: Contains unit and integration tests.
-
----
-
-## Project Structure
-
-The solution is organized into the following projects:
-
-### **Core Layer**
-- **Core.Domain**
-  - **Entities**: Contains domain models (e.g., `Product`, `Customer`).
-  - **Interfaces**: Defines abstractions for repositories and services.
-- **Core.Application**
-  - **DTOs**: Data Transfer Objects for transferring data between layers.
-  - **Services**: Implements application services and use cases.
-
-### **Infrastructure Layer**
-- **Infrastructure.Persistence**: Handles database access and Entity Framework configurations.
-- **Infrastructure.Repository**: Implements repository patterns for data access.
-
-### **Presentation Layer**
-- **WebAPI**: Provides RESTful API endpoints.
-- **WebUI**: Contains the user interface (e.g., MVC, Razor Pages).
-
-### **Dependency Injection Layer**
-- **DependencyInjection**: Centralizes dependency registration for the application.
-
-### **Tests Layer**
-- **UnitTests**: Contains unit tests for the application.
-- **IntegrationTests**: Contains integration tests for the application.
+- [Solution Overview](#solution-overview)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Running the Application](#running-the-application)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
-## Technologies Used
+## 🎯 Solution Overview
 
-- **.NET 6**: The framework used for building the application.
-- **Entity Framework Core**: For database access and ORM.
-- **ASP.NET Core**: For building the WebAPI and WebUI.
-- **xUnit**: For unit and integration testing.
-- **Dependency Injection**: Built-in .NET Core DI container.
-- **GitHub Actions**: For CI/CD pipeline.
+The **Onion Architecture** ensures loose coupling between application layers. It consists of the following layers:
+
+- **Core (Domain Layer)** - Contains **domain models, business rules, and interfaces**.
+- **Application Layer** - Implements **use cases, services, and DTOs**.
+- **Infrastructure Layer** - Handles **database, repository implementations, and external integrations**.
+- **Presentation Layer** - Provides the **user interface (Web API, MVC, or Blazor UI)**.
+- **Dependency Injection Layer** - Centralizes **dependency registration**.
+- **Testing Layer** - Contains **unit and integration tests**.
 
 ---
 
-## Setup and Installation
+## 📂 Project Structure
 
-### **Prerequisites**
-- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio Code](https://code.visualstudio.com/)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or [SQLite](https://sqlite.org/index.html) for database.
+```
+OnionArchitectureDemo
+│── Core.Domain (Entities, Interfaces)
+│── Core.Application (Services, DTOs)
+│── Infrastructure.Persistence (Database, EF Core Configurations)
+│── Infrastructure.Repository (Repositories)
+│── Presentation.WebAPI (RESTful API Endpoints)
+│── Presentation.WebUI (Web Interface - MVC, Razor Pages, or Blazor)
+│── DependencyInjection (DI Configuration)
+│── Tests.UnitTests (Unit Tests)
+│── Tests.IntegrationTests (Integration Tests)
+```
 
-### **Steps**
-1. **Clone the Repository**:
-   ```bash```
-   git clone https://github.com/your-username/OnionArchitectureDemo.git
-   cd OnionArchitectureDemo
-   
-2. **Restore Dependencies**:
-   ```bash```
-  dotnet restore
-  
-3. **Configure Database**:
-  - Update the connection string in appsettings.json (WebAPI project).
-  - Run migrations to create the database:
+---
+
+## 🛠 Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| **.NET 6+** | Core framework for application development |
+| **Entity Framework Core** | ORM for data access |
+| **ASP.NET Core** | Web API and Web UI development |
+| **xUnit** | Unit and integration testing framework |
+| **FluentValidation** | Request validation |
+| **MediatR** | CQRS pattern implementation |
+| **AutoMapper** | Object mapping |
+| **Swagger (NSwag)** | API documentation |
+| **GitHub Actions** | CI/CD pipeline |
+
+---
+
+## 🚀 Setup and Installation
+
+### ✅ Prerequisites
+
+- Install **.NET 6 SDK**
+- Install **Visual Studio 2022** or **VS Code**
+- Install **SQL Server** or **SQLite**
+
+### 🔧 Steps to Install
+
+1️⃣ **Clone the Repository**
+```sh
+git clone https://github.com/your-username/OnionArchitectureDemo.git
+cd OnionArchitectureDemo
+```
+
+2️⃣ **Restore Dependencies**
+```sh
+dotnet restore
+```
+
+3️⃣ **Configure Database**
+- Update the connection string in `appsettings.json` (WebAPI project).
+- Run migrations to create the database:
+```sh
+dotnet ef database update --project Infrastructure.Persistence
+```
+
+4️⃣ **Run the Application**
+
+- Start the WebAPI project:
+```sh
+dotnet run --project Presentation.WebAPI
+```
+- Start the WebUI project (if applicable):
+```sh
+dotnet run --project Presentation.WebUI
+```
+
+---
+
+## ▶ Running the Application
+
+### 🌐 Web API
+- Open Swagger UI: [`https://localhost:5001/swagger`](https://localhost:5001/swagger)
+- Use **Postman** or **curl** to test API endpoints.
+
+### 🖥 Web UI
+- Open: [`https://localhost:5002`](https://localhost:5002)
+
+---
+
+## 🧪 Testing
+
+### ✅ Unit Tests
+Run unit tests with:
+```sh
+dotnet test Tests.UnitTests
+```
+
+### 🔍 Integration Tests
+Run integration tests with:
+```sh
+dotnet test Tests.IntegrationTests
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Follow these steps:
+
+1. **Fork** the repository.
+2. **Create a new branch**:
+```sh
+git checkout -b feature/your-feature-name
+```
+3. **Commit your changes**:
+```sh
+git commit -m "Add new feature"
+```
+4. **Push to the branch**:
+```sh
+git push origin feature/your-feature-name
+```
+5. **Open a pull request**.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Inspired by **Onion Architecture** principles
+- Special thanks to the **.NET community** for providing excellent resources
+
+---
+
+🚀 **Happy Coding!** 🎉
