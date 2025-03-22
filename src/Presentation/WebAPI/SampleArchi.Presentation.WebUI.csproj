@@ -8,4 +8,9 @@
     <PublishAot>true</PublishAot>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core.Application\DTOs\SampleArchi.Core.Application.DTOS.csproj" />
+    <ProjectReference Include="..\..\Core\Core.Application\Services\SampleArchi.Core.Application.Services.csproj" />
+  </ItemGroup>
+
 </Project>
