@@ -1,3 +1,4 @@
+
 # 📌 Onion Architecture Demo
 
 This repository demonstrates the implementation of **Onion Architecture** in a .NET application. The solution is structured into multiple layers to ensure **separation of concerns, testability, and maintainability**.
@@ -170,7 +171,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 +-------------------+       +-------------------+       +-------------------+
 |   Core            |       |   Core.Application|       |   Core.Domain     |
 |   - Core          |       |   - DTOs          |       |   - Entities      |
-|   - Core.Application| ----> |   - Services      | ----> |   - Interfaces    |
+|   - Application   | ----> |   - Services      | ----> |   - Interfaces    |
 +-------------------+       +-------------------+       +-------------------+
         |                           |                           |
         |                           |                           |
