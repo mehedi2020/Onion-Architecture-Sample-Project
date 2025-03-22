@@ -164,20 +164,29 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 - Inspired by **Onion Architecture** principles
 - Special thanks to the **.NET community** for providing excellent resources
 
-## Textual Workflow Representation
+### Workflow Diagram
 
+```plaintext
 +-------------------+       +-------------------+       +-------------------+
-|   Core Layer      |       | Application Layer |       | Infrastructure    |
-|   - Entities      | ----> | - DTOs            | ----> | - Persistence     |
-|   - Interfaces    |       | - Services        |       | - Repositories    |
+|   Core            |       |   Core.Application|       |   Core.Domain     |
+|   - Core          |       |   - DTOs          |       |   - Entities      |
+|   - Core.Application| ----> |   - Services      | ----> |   - Interfaces    |
 +-------------------+       +-------------------+       +-------------------+
         |                           |                           |
         |                           |                           |
         v                           v                           v
 +-------------------+       +-------------------+       +-------------------+
-| Presentation      |       | Dependency        |       | Tests Layer       |
-| - WebAPI          |       | Injection         |       | - UnitTests       |
-| - WebUI           | <---- | - DI Registration | ----> | - IntegrationTests|
+| Dependency        |       | Infrastructure    |       | Presentation      |
+| Injection         |       | - Persistence     |       | - WebAPI          |
+| - Dependency      | ----> | - Repositories    | ----> | - WebUI           |
+|   Injection       |       |                   |       |                   |
++-------------------+       +-------------------+       +-------------------+
+        |                           |                           |
+        |                           |                           |
+        v                           v                           v
++-------------------+       +-------------------+       +-------------------+
+| Tests             |       | IntegrationTests  |       | UnitTests         |
+| - Tests           |       | - IntegrationTests|       | - UnitTests       |
 +-------------------+       +-------------------+       +-------------------+
 
 ---
